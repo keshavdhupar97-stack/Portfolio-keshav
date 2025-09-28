@@ -1,6 +1,6 @@
 import { useState } from "react";
 import ImageModal from "./ImageModal";
-import { VideoText } from "../ui/VideoText";
+// import { VideoText } from "../ui/VideoText";
 
 type GalleryItem = {
   src?: string;
@@ -312,7 +312,6 @@ const galleryData: GalleryCategory[] = [
 ];
 
 export default function GalleryGrid() {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
@@ -330,27 +329,23 @@ export default function GalleryGrid() {
   const handleImageClick = (imageSrc: string) => {
     const imageIndex = allImages.findIndex((img) => img.src === imageSrc);
     setCurrentImageIndex(imageIndex);
-    setSelectedImage(imageSrc);
     setIsModalOpen(true);
   };
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
-    setSelectedImage(null);
   };
 
   const handlePrevious = () => {
     const newIndex =
       currentImageIndex > 0 ? currentImageIndex - 1 : allImages.length - 1;
     setCurrentImageIndex(newIndex);
-    setSelectedImage(allImages[newIndex].src);
   };
 
   const handleNext = () => {
     const newIndex =
       currentImageIndex < allImages.length - 1 ? currentImageIndex + 1 : 0;
     setCurrentImageIndex(newIndex);
-    setSelectedImage(allImages[newIndex].src);
   };
 
   return (

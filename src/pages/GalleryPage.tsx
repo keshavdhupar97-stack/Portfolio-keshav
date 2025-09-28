@@ -78,11 +78,11 @@ const GalleryPage = () => {
 
         <MouseGradient isMobile={isMobile} />
         <Gallery 
-          isGalleryInView={true} 
-          isMobile={isMobile} 
-          backgroundGradient="linear-gradient(to bottom, #ffffff, #ffffff)"
-          isModalOpen={isModalOpen}
-          setIsModalOpen={setIsModalOpen}
+          // isGalleryInView={true} 
+          // isMobile={isMobile} 
+          // backgroundGradient="linear-gradient(to bottom, #ffffff, #ffffff)"
+          // isModalOpen={isModalOpen}
+          // setIsModalOpen={setIsModalOpen}
         />
       </div>
     </ReactLenis>

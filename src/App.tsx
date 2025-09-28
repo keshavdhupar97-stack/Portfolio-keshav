@@ -23,7 +23,7 @@ import { ReactLenis } from "@studio-freight/react-lenis";
 // import DotGrid from "./components/ui/DotGrid/DotGrid";
 // import MagnetLines from "./components/ui/MagnetLines/MagnetLines";
 import BackgroundSVG from "./components/hero/BackgroundSVG";
-import { SmoothCursor } from "./components/ui/SmoothCursor ";
+// import { SmoothCursor } from "./components/ui/SmoothCursor ";
 
 function App() {
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
